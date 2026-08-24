@@ -1,18 +1,7 @@
-buildscript {
-	repositories {
-		maven {
-			name = 'Fabric'
-			url = 'https://maven.fabricmc.net/'
-		}
-		mavenCentral()
-	}
-	dependencies {
-		classpath 'net.fabricmc:fabric-loom:1.6.14'
-	}
+plugins {
+	id 'net.fabricmc.fabric-loom' version '1.6-SNAPSHOT'
+	id 'maven-publish'
 }
-
-apply plugin: 'fabric-loom'
-apply plugin: 'maven-publish'
 
 version = project.mod_version
 group = project.maven_group
